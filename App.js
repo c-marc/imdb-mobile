@@ -10,7 +10,7 @@ export default function App() {
       </View>
 
       <Text style={styles.h1}>Interstellar</Text>
-      <Text>2014 PG-13 2h 49min Adventure, Drama, Sci-Fi</Text>
+      <Text style={styles.p}>2014 PG-13 2h 49min Adventure, Drama, Sci-Fi</Text>
 
       <View style={styles.movieCard}>
         <Image
@@ -18,31 +18,31 @@ export default function App() {
           style={styles.movieCardImg}
         />
         <View>
-          <Text>
+          <Text style={styles.p}>
             A team of explorers travel travel through a wormhole in space in an
             attempt to ensure humanity's survival
           </Text>
-          <Text>Add to watchlist</Text>
+          <Text style={styles.p}>Add to watchlist</Text>
         </View>
       </View>
 
       <View style={styles.stats}>
         <View>
-          <Text>8.6/10</Text>
-          <Text>1.1M</Text>
+          <Text style={styles.p}>8.6/10</Text>
+          <Text style={styles.p}>1.1M</Text>
         </View>
 
-        <Text>Rate this</Text>
+        <Text style={styles.p}>Rate this</Text>
 
         <View>
-          <Text>74</Text>
-          <Text>Metascore</Text>
-          <Text>46 critics reviews</Text>
+          <Text style={styles.p}>74</Text>
+          <Text style={styles.p}>Metascore</Text>
+          <Text style={styles.p}>46 critics reviews</Text>
         </View>
       </View>
 
       <Text style={styles.h2}>Top Billed Cast</Text>
-      <Text>See all</Text>
+      <Text style={styles.p}>See all</Text>
 
       <ScrollView
         horizontal
@@ -54,8 +54,8 @@ export default function App() {
             style={styles.actorCardImg}
             source={require("./assets/matthew.jpg")}
           />
-          <Text>Matthew McConaughey</Text>
-          <Text>Cooper</Text>
+          <Text style={styles.p}>Matthew McConaughey</Text>
+          <Text style={styles.p}>Cooper</Text>
         </View>
 
         <View style={styles.actorCard}>
@@ -63,8 +63,8 @@ export default function App() {
             style={styles.actorCardImg}
             source={require("./assets/anne.jpg")}
           />
-          <Text>Anne Hathaway</Text>
-          <Text>Brand</Text>
+          <Text style={styles.p}>Anne Hathaway</Text>
+          <Text style={styles.p}>Brand</Text>
         </View>
 
         <View style={styles.actorCard}>
@@ -72,16 +72,16 @@ export default function App() {
             style={styles.actorCardImg}
             source={require("./assets/jessica.jpg")}
           />
-          <Text>Jessica Ch</Text>
-          <Text>Murph</Text>
+          <Text style={styles.p}>Jessica Ch</Text>
+          <Text style={styles.p}>Murph</Text>
         </View>
       </ScrollView>
 
       <Text style={styles.h3}>Director</Text>
-      <Text>Christopher Nolan</Text>
+      <Text style={styles.p}>Christopher Nolan</Text>
 
       <Text style={styles.h3}>Writers</Text>
-      <Text>
+      <Text style={styles.p}>
         Jonathan Nolan (written by) andd Christopher Nolan (written by)
       </Text>
 
@@ -98,7 +98,8 @@ const styles = StyleSheet.create({
 
   logo: {
     height: 60,
-    width: 40,
+    width: 100,
+    resizeMode: "contain",
   },
   h1: {
     fontSize: 30,
@@ -112,11 +113,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: "white",
   },
-  pWhite: {
+  p: {
     color: "white",
-  },
-  pGrey: {
-    color: "grey",
   },
 
   bgGrey: {
