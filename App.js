@@ -169,6 +169,8 @@ const styles = StyleSheet.create({
     backgroundColor: "grey",
   },
   movieCard: {
+    //width: "100%", // nope
+    //flex: 1, // nope
     flexDirection: "row",
     justifyContent: "space-between",
     gap: 10,
