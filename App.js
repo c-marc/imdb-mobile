@@ -5,7 +5,7 @@ import Constants from "expo-constants";
 export default function App() {
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.bgGrey}>
+      <View style={styles.header}>
         <Image source={require("./assets/logo-imdb.png")} style={styles.logo} />
       </View>
 
@@ -95,12 +95,17 @@ const styles = StyleSheet.create({
     marginTop: Constants.statusBarHeight,
     backgroundColor: "black",
   },
-
+  header: {
+    paddingTop: 5,
+    paddingBottom: 5,
+    backgroundColor: "grey",
+  },
   logo: {
-    height: 60,
+    height: 20,
     width: 100,
     resizeMode: "contain",
   },
+
   h1: {
     fontSize: 30,
     color: "white",
