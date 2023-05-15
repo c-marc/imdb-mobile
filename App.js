@@ -44,21 +44,34 @@ export default function App() {
       <Text style={styles.h2}>Top Billed Cast</Text>
       <Text>See all</Text>
 
-      <ScrollView horizontal style={styles.actors}>
-        <View style={styles.actor}>
-          <Image source={require("./assets/matthew.jpg")} />
+      <ScrollView
+        horizontal
+        style={styles.actors}
+        contentContainerStyle={{ gap: 10 }}
+      >
+        <View style={styles.actorCard}>
+          <Image
+            style={styles.actorCardImg}
+            source={require("./assets/matthew.jpg")}
+          />
           <Text>Matthew McConaughey</Text>
           <Text>Cooper</Text>
         </View>
 
-        <View style={styles.actor}>
-          <Image source={require("./assets/anne.jpg")} />
+        <View style={styles.actorCard}>
+          <Image
+            style={styles.actorCardImg}
+            source={require("./assets/anne.jpg")}
+          />
           <Text>Anne Hathaway</Text>
           <Text>Brand</Text>
         </View>
 
-        <View style={styles.actor}>
-          <Image source={require("./assets/jessica.jpg")} />
+        <View style={styles.actorCard}>
+          <Image
+            style={styles.actorCardImg}
+            source={require("./assets/jessica.jpg")}
+          />
           <Text>Jessica Ch</Text>
           <Text>Murph</Text>
         </View>
@@ -118,6 +131,9 @@ const styles = StyleSheet.create({
   stats: {
     flexDirection: "row",
     gap: 10,
+  },
+  actorCard: {
+    backgroundColor: "grey",
   },
   actorCardImg: {
     height: 100,
