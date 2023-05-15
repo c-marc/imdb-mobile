@@ -41,7 +41,7 @@ export default function App() {
 
         <View style={styles.stats}>
           <View style={styles.stat}>
-            <Entypo name="star" size={24} color="yellow" />
+            <Entypo name="star" size={24} color={col.yellow} />
             <Text style={styles.p}>8.6/10</Text>
             <Text style={styles.p}>1.1M</Text>
           </View>
@@ -58,9 +58,15 @@ export default function App() {
           </View>
         </View>
 
-        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "flex-end",
+          }}
+        >
           <Text style={styles.h2}>Top Billed Cast</Text>
-          <Text style={{ color: "blue" }}>See all</Text>
+          <Text style={{ color: col.blue }}>See all</Text>
         </View>
 
         <ScrollView
@@ -110,6 +116,14 @@ export default function App() {
   );
 }
 
+const col = {
+  blue: "#0177BD",
+  yellow: "gold",
+  dark1: "#212121",
+  dark2: "#2A2A2A",
+  grey: "#393939",
+};
+
 const styles = StyleSheet.create({
   scrollContainer: {
     marginTop: Constants.statusBarHeight,
@@ -121,7 +135,7 @@ const styles = StyleSheet.create({
   header: {
     paddingTop: 5,
     paddingBottom: 5,
-    backgroundColor: "grey",
+    backgroundColor: col.grey,
   },
   logo: {
     height: 20,
@@ -145,7 +159,7 @@ const styles = StyleSheet.create({
     color: "white",
   },
   btn: {
-    backgroundColor: "blue",
+    backgroundColor: col.blue,
     borderRadius: 5,
   },
   btnText: {
@@ -161,6 +175,7 @@ const styles = StyleSheet.create({
   },
   movieCardImg: {
     width: "35%",
+    height: undefined,
     aspectRatio: 3 / 4,
   },
   stats: {
@@ -180,11 +195,12 @@ const styles = StyleSheet.create({
     backgroundColor: "green",
   },
   actorCard: {
-    backgroundColor: "grey",
+    backgroundColor: col.dark2,
   },
   actorCardImg: {
     width: 150,
-    //aspectRatio: 3 / 4,
-    height: 150 / (3 / 4),
+    //height: 150 / (3 / 4),
+    height: undefined,
+    aspectRatio: 3 / 4,
   },
 });
