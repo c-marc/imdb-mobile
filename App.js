@@ -98,17 +98,18 @@ const styles = StyleSheet.create({
 
   logo: {
     height: 60,
+    width: 40,
   },
   h1: {
-    fontSize: 1.4,
+    fontSize: 30,
     color: "white",
   },
   h2: {
-    fontSize: 1.2,
+    fontSize: 24,
     color: "white",
   },
   h3: {
-    fontSize: 1.1,
+    fontSize: 20,
     color: "white",
   },
   pWhite: {
