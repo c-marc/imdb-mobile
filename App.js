@@ -28,7 +28,7 @@ export default function App() {
             source={require("./assets/film.jpg")}
             style={styles.movieCardImg}
           />
-          <View>
+          <View style={{ flex: 1 }}>
             <Text style={styles.p}>
               A team of explorers travel travel through a wormhole in space in
               an attempt to ensure humanity's survival
